@@ -65,7 +65,12 @@
     }
     return nil;
 }
-
+- (NSArray *)arrayAtIndexPath:(NSIndexPath *)indexPath{
+    if (_models.count > indexPath.section) {
+        return _models[indexPath.section];
+    }
+    return nil;
+}
 - (void)registerCells:(NSArray<ZABRegisterCell *> *)cells{
     if (cells.count > 0) {
         _cells = cells;
@@ -109,15 +114,15 @@
     id model = [self modelAtIndexPath:indexPath];
     
     [cell bindData:model indexPath:indexPath];
-    
+    [cell bindArray:[self arrayAtIndexPath:indexPath] indexPath:indexPath];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if([self.delegate respondsToSelector:@selector(zabTableView:didSelectRowAtIndexPath:)]) {
-        [self.delegate zabTableView:self didSelectRowAtIndexPath:indexPath];
+    if([self.delegate respondsToSelector:@selector(zabTableView:didSelectRowAtIndexPath:withModel:)]) {
+        [self.delegate zabTableView:self didSelectRowAtIndexPath:indexPath withModel:[self modelAtIndexPath:indexPath]];
     }
 }
 
@@ -127,6 +132,7 @@
     }else{
         
         CGFloat height = [tableView fd_heightForCellWithIdentifier:[self findCellIdentifier:indexPath] cacheByIndexPath:indexPath configuration:^(ZABTableViewCell *cell) {
+            
             [cell bindData:[self modelAtIndexPath:indexPath] indexPath:indexPath];
             
         }];

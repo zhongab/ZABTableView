@@ -8,6 +8,7 @@
 
 #import "PersonCellTableViewCell.h"
 #import "Person.h"
+#import "Masonry.h"
 @implementation PersonCellTableViewCell
 
 - (void)awakeFromNib {
@@ -26,26 +27,46 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        self.labelLeft = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, self.frame.size.height)];
-        [self.contentView addSubview:self.labelLeft];
-        //self.labelLeft.backgroundColor = [UIColor redColor];
         
-        
-        self.labelRight = [[UILabel alloc] initWithFrame:CGRectMake(150, 0, self.frame.size.width - 150, self.frame.size.height)];
-        [self.contentView addSubview:self.labelRight];
-        //self.labelRight.backgroundColor = [UIColor blueColor];
-        
-        
-        
+        [self setupMasonry];
     }
     return self;
     
 }
+- (void)setupMasonry{
+    
+    
+    self.labelLeft = [[UILabel alloc] initWithFrame:CGRectZero];
+    [self.contentView addSubview:self.labelLeft];
+    self.labelLeft.backgroundColor = [UIColor redColor];
+    self.labelLeft.numberOfLines = 0;
+    [self.labelLeft mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.contentView.mas_left).offset(20);
+        make.right.mas_equalTo(self.contentView.mas_right).offset(-20);
+        make.top.mas_equalTo(self.contentView.mas_top);
+    }];
+    
+    self.labelRight = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.labelRight.numberOfLines = 0;
+    [self.contentView addSubview:self.labelRight];
+    self.labelRight.backgroundColor = [UIColor blueColor];
+    [self.labelRight mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.labelLeft.mas_left);
+        make.right.mas_equalTo(self.contentView.mas_right).offset(-20);
+        make.top.mas_equalTo(self.labelLeft.mas_bottom).offset(5);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-20);
+        
+    }];
+
+}
+
+
 - (void)bindData:(id)model indexPath:(NSIndexPath * )indexPath{
+    [super bindData:model indexPath:indexPath];
     if ([model isKindOfClass:[Person class]]) {
         Person *p = (Person *)model;
         self.labelLeft.text = p.name;
-        self.labelRight.text = [NSString stringWithFormat:@"%zd",p.age];
+        self.labelRight.text = p.remark;
     }
 }
 

@@ -1,12 +1,12 @@
 PODS:
-  - UITableView+FDTemplateLayoutCell (1.4)
+  - Masonry (1.0.2)
 
 DEPENDENCIES:
-  - UITableView+FDTemplateLayoutCell
+  - Masonry (~> 1.0.2)
 
 SPEC CHECKSUMS:
-  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
 
-PODFILE CHECKSUM: c6ef3d87c2df2e4b0f860f3ed2eef3ae98dff8f2
+PODFILE CHECKSUM: 38082ec6a8268c5fcdea3b39602354cd8e19ea0d
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1.rc.1

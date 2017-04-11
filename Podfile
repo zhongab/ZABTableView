@@ -6,8 +6,7 @@ target 'TableViewDemo' do
   # use_frameworks!
 
   # Pods for TableViewDemo
-    pod 'UITableView+FDTemplateLayoutCell'
-
+    pod 'Masonry', '~> 1.0.2'
 
   target 'TableViewDemoUITests' do
     inherit! :search_paths

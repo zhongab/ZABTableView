@@ -31,4 +31,7 @@
 - (void)bindData:(id)model indexPath:(NSIndexPath * )indexPath{
     
 }
+- (void)bindArray:(NSArray *)datas indexPath:(NSIndexPath * )indexPath{
+    
+}
 @end

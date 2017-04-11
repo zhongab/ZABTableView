@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TableViewDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,20 +19,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UITableView+FDTemplateLayoutCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>51E38A63D5510AD6EEF6384C6459395C</key>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73943F307D6926E8DF09EE3B6BF2A5DB</key>
+		<key>C18A1C39B72E4E3D50CB0647F13237B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

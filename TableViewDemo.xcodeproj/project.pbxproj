@@ -11,6 +11,10 @@
 		145732BA1E9603D900F76BF4 /* ZABRegisterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145732B91E9603D900F76BF4 /* ZABRegisterCell.m */; };
 		145732BD1E96343400F76BF4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 145732BC1E96343400F76BF4 /* Person.m */; };
 		146D32C01E94FBD200F16923 /* ZABTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 146D32BF1E94FBD200F16923 /* ZABTableViewCell.m */; };
+		14B1D3081E9D0450001E5FA1 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1D3011E9D0450001E5FA1 /* UITableView+FDIndexPathHeightCache.m */; };
+		14B1D3091E9D0450001E5FA1 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1D3031E9D0450001E5FA1 /* UITableView+FDKeyedHeightCache.m */; };
+		14B1D30A1E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1D3051E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCell.m */; };
+		14B1D30B1E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1D3071E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		14B20DB51E94F4AB00575547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B20DB41E94F4AB00575547 /* main.m */; };
 		14B20DB81E94F4AB00575547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B20DB71E94F4AB00575547 /* AppDelegate.m */; };
 		14B20DBB1E94F4AB00575547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B20DBA1E94F4AB00575547 /* ViewController.m */; };
@@ -42,6 +46,14 @@
 		145732BC1E96343400F76BF4 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		146D32BE1E94FBD200F16923 /* ZABTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZABTableViewCell.h; sourceTree = "<group>"; };
 		146D32BF1E94FBD200F16923 /* ZABTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZABTableViewCell.m; sourceTree = "<group>"; };
+		14B1D3001E9D0450001E5FA1 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		14B1D3011E9D0450001E5FA1 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		14B1D3021E9D0450001E5FA1 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		14B1D3031E9D0450001E5FA1 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		14B1D3041E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		14B1D3051E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		14B1D3061E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		14B1D3071E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		14B20DB01E94F4AB00575547 /* TableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B20DB41E94F4AB00575547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14B20DB61E94F4AB00575547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,9 +97,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14B1D2FF1E9D0450001E5FA1 /* FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				14B1D3001E9D0450001E5FA1 /* UITableView+FDIndexPathHeightCache.h */,
+				14B1D3011E9D0450001E5FA1 /* UITableView+FDIndexPathHeightCache.m */,
+				14B1D3021E9D0450001E5FA1 /* UITableView+FDKeyedHeightCache.h */,
+				14B1D3031E9D0450001E5FA1 /* UITableView+FDKeyedHeightCache.m */,
+				14B1D3041E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCell.h */,
+				14B1D3051E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCell.m */,
+				14B1D3061E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				14B1D3071E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCellDebug.m */,
+			);
+			path = FDTemplateLayoutCell;
+			sourceTree = "<group>";
+		};
 		14B20DA71E94F4AB00575547 = {
 			isa = PBXGroup;
 			children = (
+				14B1D2FF1E9D0450001E5FA1 /* FDTemplateLayoutCell */,
 				14B20DB21E94F4AB00575547 /* TableViewDemo */,
 				14B20DCC1E94F4AB00575547 /* TableViewDemoUITests */,
 				14B20DB11E94F4AB00575547 /* Products */,
@@ -292,7 +320,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1BF3465F89433074D0C4379F /* [CP] Embed Pods Frameworks */ = {
@@ -337,7 +365,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A040D2F482A16D69E7D7F1E2 /* [CP] Copy Pods Resources */ = {
@@ -377,10 +405,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B1D3081E9D0450001E5FA1 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				14B20DBB1E94F4AB00575547 /* ViewController.m in Sources */,
 				14B20DDB1E94F5D900575547 /* ZABTableView.m in Sources */,
 				145732BD1E96343400F76BF4 /* Person.m in Sources */,
+				14B1D3091E9D0450001E5FA1 /* UITableView+FDKeyedHeightCache.m in Sources */,
+				14B1D30B1E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				14B20DB81E94F4AB00575547 /* AppDelegate.m in Sources */,
+				14B1D30A1E9D0450001E5FA1 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				14B20DB51E94F4AB00575547 /* main.m in Sources */,
 				145732B71E95F99B00F76BF4 /* PersonCellTableViewCell.m in Sources */,
 				145732BA1E9603D900F76BF4 /* ZABRegisterCell.m in Sources */,
