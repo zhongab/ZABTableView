@@ -136,7 +136,9 @@
             [cell bindData:[self modelAtIndexPath:indexPath] indexPath:indexPath];
             
         }];
-        if (height < 45.0) height = 45.0;
+        if (_miniRowHeight > 0) {
+            if (height < _miniRowHeight) height = _miniRowHeight;
+        }
         return height;
     }
 }

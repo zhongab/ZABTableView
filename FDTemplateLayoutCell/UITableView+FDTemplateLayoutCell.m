@@ -58,25 +58,32 @@
     if (!cell.fd_enforceFrameLayout && contentViewWidth > 0) {
         // Add a hard width constraint to make dynamic content views (like labels) expand vertically instead
         // of growing horizontally, in a flow-layout manner.
+        
+        //10.3版本出现的问题
         if ([[[UIDevice currentDevice] systemVersion] floatValue] > 10.2) {
             
             [cell.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(0).priorityLow();
                 make.right.mas_equalTo(0).priorityLow();
+                make.top.mas_equalTo(0).priorityLow();
+                make.bottom.mas_equalTo(0).priorityLow();
             }];
-        }
-        
+            
+              fittingHeight = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+            
+        }else{
             NSLayoutConstraint *widthFenceConstraint = [NSLayoutConstraint constraintWithItem:cell.contentView
-                                                                                attribute:NSLayoutAttributeWidth
-                                                                                relatedBy:NSLayoutRelationEqual
-                                                                                   toItem:nil
-                                                                                attribute:NSLayoutAttributeNotAnAttribute
-                                                                               multiplier:1.0
-                                                                                 constant:contentViewWidth];
+                                                                                    attribute:NSLayoutAttributeWidth
+                                                                                    relatedBy:NSLayoutRelationEqual
+                                                                                       toItem:nil
+                                                                                    attribute:NSLayoutAttributeNotAnAttribute
+                                                                                   multiplier:1.0
+                                                                                     constant:contentViewWidth];
             [cell.contentView addConstraint:widthFenceConstraint];
             fittingHeight = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
             [cell.contentView removeConstraint:widthFenceConstraint];
-        
+
+        }
         
         // Auto layout engine does its math
        

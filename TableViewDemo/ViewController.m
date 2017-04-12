@@ -22,7 +22,7 @@
     NSMutableArray *array = [NSMutableArray array];
     for (int i= 0; i < 20; i++) {
         Person *p = [Person new];
-        p.name = [NSString stringWithFormat:@"name%d",i];
+        p.name = @"索朗多吉发了多少积分累计失联飞机拉屎的风景老师的加夫里什积分累计啊失联飞机拉屎就疯了似的f";
         p.remark = @"索朗多吉发了多少积分累计失联飞机拉屎的风景老师的加夫里什积分累计啊失联飞机拉屎就疯了似的f";
         [array addObject:p];
     }

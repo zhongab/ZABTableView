@@ -31,7 +31,7 @@
 @property(nonatomic,weak)id<ZABDataDelegate> delegate;
 @property(nonatomic,assign)BOOL isSeparatorInsetZero;//分割线是否到头
 @property(nonatomic,assign)BOOL isShowSeparatorLine;//是否显示分割线
-@property(nonatomic,assign)CGFloat miniRowHeight;//是否显示分割线
+@property(nonatomic,assign)CGFloat miniRowHeight;//最小行高
 
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style;
